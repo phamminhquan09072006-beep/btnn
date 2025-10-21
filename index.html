@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bói Toán Huyền Bí — Logic & Cá nhân hóa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="galaxy"></canvas>
+
+  <div id="app">
+    <div id="form-section" class="card active">
+      <h1>🔮 Bói Toán Huyền Bí</h1>
+      <p>Nhập thông tin để nhận kết quả được cá nhân hoá theo tên và ngày sinh (kết quả có logic, lặp lại với cùng input).</p>
+
+      <input id="name" type="text" placeholder="Họ và tên" />
+      <input id="age" type="number" placeholder="Tuổi" min="1" />
+      <input id="dob" type="date" placeholder="Ngày sinh" />
+
+      <div class="controls">
+        <button id="startBtn" class="btn primary">Bắt đầu ✨</button>
+        <button id="seedPreview" class="btn ghost">Xem mã cá nhân (debug)</button>
+      </div>
+    </div>
+
+    <div id="topic-section" class="card">
+      <h2>Chọn chủ đề bạn muốn khám phá</h2>
+      <div class="topics">
+        <button class="topic btn" data-topic="tinhduyen">Tình duyên 💞</button>
+        <button class="topic btn" data-topic="hocvan">Học tập / Sự nghiệp 📚</button>
+        <button class="topic btn" data-topic="tiente">Tiền tài 💰</button>
+        <button class="topic btn" data-topic="giadinh">Gia đình 🏠</button>
+        <button class="topic btn" data-topic="suckhoe">Sức khỏe 🌿</button>
+        <button class="topic btn" data-topic="vanmenh">Vận mệnh tổng quan 🌟</button>
+      </div>
+    </div>
+
+    <div id="result-section" class="card">
+      <h2>Kết quả bói toán</h2>
+      <div id="result-area"></div>
+      <div class="controls">
+        <button id="againBtn" class="btn">Chọn chủ đề khác 🔁</button>
+        <button id="restartBtn" class="btn ghost">Nhập lại thông tin ✍️</button>
+      </div>
+    </div>
+
+    <!-- modal hiển thị seed/debug -->
+    <div id="modal" class="modal">
+      <div class="modal-card">
+        <h3>Mã cá nhân (seed)</h3>
+        <pre id="seedText"></pre>
+        <button id="closeModal" class="btn">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
